@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'antd';
 
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
@@ -21,21 +22,23 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
-        <button
+        <Button
+          type="primary"
           className={styles.button}
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
           -
-        </button>
+        </Button>
         <span className={styles.value}>{count}</span>
-        <button
+        <Button
+          type="primary"
           className={styles.button}
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
           +
-        </button>
+        </Button>
       </div>
       <div className={styles.row}>
         <input
